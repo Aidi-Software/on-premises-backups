@@ -1,3 +1,18 @@
+- [Aidi On-Premises Backup](#aidi-on-premises-backup)
+  - [Quickstart](#quickstart)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Execution](#execution)
+  - [Usage](#usage)
+  - [Examples](#examples)
+- [Sauvegardes Aidi Sur-Site](#sauvegardes-aidi-sur-site)
+  - [Démarrage rapide:](#démarrage-rapide)
+  - [Prérequis](#prérequis)
+  - [Installation](#installation-1)
+  - [Exécution](#exécution)
+  - [Utilisation](#utilisation)
+  - [Exemples](#exemples)
+
 # Aidi On-Premises Backup
 
 Aidi On-Premise Backup script
@@ -6,6 +21,15 @@ Generates a backup of an Aidi instance locally. Is essentially a wrapper for a b
 
 This script is meant to backup an Aidi instance locally. It is not meant to extract or manipulate Aidi's data. The structure and content of the data returned by this script may change over time without notice. 
 As a result, the data returned by this script should not be used for business logic, reporting, or any other application beyond backups. Aidi is not responsible for any issues arising from the use of this script outside its intended purpose.
+
+## Quickstart
+- Obtain an Aidi backup bucket name, an Aidi backup access key and an Aidi backup secret key from your Aidi customer representative
+- Download the latest release from [release page](https://github.com/Aidi-Software/on-premises-backups/releases)
+- From the unzipped directory, run `python3 -m pip install -r requirements.txt`
+- From the unzipped directory, run the following command:
+```
+python3 aidi-on-premise-backup.py -b <backup_bucket_name> -a <backup_access_key> -s <backup_secret_key> -t /path/to/backup -f true -o false
+```
 
 ## Prerequisites
 
@@ -66,6 +90,15 @@ Génère une sauvegarde d'une instance Aidi localement. Est essentiellement une 
 Ce script est destiné à sauvegarder votre instance Aidi localement. Il n'est pas destiné à extraire ou manipuler les données d'Aidi. La structure et le contenu des données renvoyées par ce script peuvent changer sans préavis. 
 Par conséquent, les données renvoyées par ce script ne doivent pas être utilisées à des fins de logique applicative, de création de rapports ou pour toute autre application autre que les sauvegardes. Aidi n'est pas responsable des problèmes résultant de l'utilisation de ce script en dehors de son objectif prévu.
 
+## Démarrage rapide:
+- Obtenez un nom de bucket de sauvegarde Aidi, une clé d'accès de sauvegarde Aidi et une clé secrète de sauvegarde Aidi auprès de votre représentant client Aidi
+- Téléchargez la dernière version depuis [page de publication](https://github.com/Aidi-Software/on-premises-backups/releases)
+- Depuis le répertoire décompressé, exécutez `python3 -m pip install -r requirements.txt`
+- Depuis le répertoire décompressé, exécutez la commande suivante :
+```
+python3 aidi-on-premise-backup.py -b <backup_bucket_name> -a <backup_access_key> -s <backup_secret_key> -t /emplacement/de/la/sauvegarde -f true -o false
+```
+
 ## Prérequis
 
 Une installation `python3` valide doit être disponible sur le système d'exploitation. Vérifiez qu'une installation Python valide est présente en saisissant `python3 --version` dans un terminal.
@@ -104,7 +137,7 @@ python3 aidi-on-premises-backup.py
 - `-f|--force-create-directory <force_create_directory>` : indique si le répertoire (et tous ses parents) doivent être créés automatiquement ou non s'ils n'existent pas. Le script peux arréter son exécution s'il n'a pas l'autorisation de créer le répertoire. La valeur par défaut est `false`.
 - `-o|--overwrite-existing-files <overwrite_existing_files>` : remplace les fichiers téléchargés s'ils n'existent pas déjà. La valeur par défaut est `false`.
 
-## Examples
+## Exemples
 
 Téléchargement de tous les fichiers du bucket nommé `backup-fs-my-environment-name` dans `C:\backup-2025-25-08` (créer le dossier automatiquement), étant donné la clé d'accès `ABCDEFGHIJ1234567890` et la clé secrète `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`. :
 ```
