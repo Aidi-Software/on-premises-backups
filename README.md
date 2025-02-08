@@ -6,7 +6,7 @@
   - [Usage](#usage)
   - [Examples](#examples)
 - [Sauvegardes Aidi Sur-Site](#sauvegardes-aidi-sur-site)
-  - [Démarrage rapide:](#démarrage-rapide)
+  - [Démarrage rapide](#démarrage-rapide)
   - [Prérequis](#prérequis)
   - [Installation](#installation-1)
   - [Exécution](#exécution)
@@ -90,13 +90,13 @@ Génère une sauvegarde d'une instance Aidi localement. Est essentiellement une 
 Ce script est destiné à sauvegarder votre instance Aidi localement. Il n'est pas destiné à extraire ou manipuler les données d'Aidi. La structure et le contenu des données renvoyées par ce script peuvent changer sans préavis. 
 Par conséquent, les données renvoyées par ce script ne doivent pas être utilisées à des fins de logique applicative, de création de rapports ou pour toute autre application autre que les sauvegardes. Aidi n'est pas responsable des problèmes résultant de l'utilisation de ce script en dehors de son objectif prévu.
 
-## Démarrage rapide:
+## Démarrage rapide
 - Obtenez un nom de bucket de sauvegarde Aidi, une clé d'accès de sauvegarde Aidi et une clé secrète de sauvegarde Aidi auprès de votre représentant client Aidi
 - Téléchargez la dernière version depuis [page de publication](https://github.com/Aidi-Software/on-premises-backups/releases)
 - Depuis le répertoire décompressé, exécutez `python3 -m pip install -r requirements.txt`
 - Depuis le répertoire décompressé, exécutez la commande suivante :
 ```
-python3 aidi-on-premise-backup.py -b <backup_bucket_name> -a <backup_access_key> -s <backup_secret_key> -t /emplacement/de/la/sauvegarde -f true -o false
+python3 aidi-on-premise-backup.py -b <nom_bucket_sauvegarde> -a <cle_acces_sauvegarde> -s <cle_secrete_sauvegarde> -t /emplacement/de/la/sauvegarde -f true -o false
 ```
 
 ## Prérequis
