@@ -29,7 +29,7 @@ As a result, the data returned by this script should not be used for business lo
 - From the unzipped directory, run `python3 -m pip install -r requirements.txt`
 - From the unzipped directory, run the following command:
 ```
-python3 aidi-on-premise-backup.py -b <backup_bucket_name> -a <backup_access_key> -s <backup_secret_key> -t /path/to/backup -f true -o false
+python3 aidi-on-premises-backup.py -b <backup_bucket_name> -a <backup_access_key> -s <backup_secret_key> -t /path/to/backup -f true -o false
 ```
 
 ## Prerequisites
@@ -98,7 +98,7 @@ Par conséquent, les données renvoyées par ce script ne doivent pas être util
 - Depuis le répertoire décompressé, exécutez `python3 -m pip install -r requirements.txt`
 - Depuis le répertoire décompressé, exécutez la commande suivante :
 ```
-python3 aidi-on-premise-backup.py -b <nom_bucket_sauvegarde> -a <cle_acces_sauvegarde> -s <cle_secrete_sauvegarde> -t /emplacement/de/la/sauvegarde -f true -o false
+python3 aidi-on-premises-backup.py -b <nom_bucket_sauvegarde> -a <cle_acces_sauvegarde> -s <cle_secrete_sauvegarde> -t /emplacement/de/la/sauvegarde -f true -o false
 ```
 
 ## Prérequis
