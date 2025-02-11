@@ -23,7 +23,8 @@ This script is meant to backup an Aidi instance locally. It is not meant to extr
 As a result, the data returned by this script should not be used for business logic, reporting, or any other application beyond backups. Aidi is not responsible for any issues arising from the use of this script outside its intended purpose.
 
 ## Quickstart
-- Obtain an Aidi backup bucket name, an Aidi backup access key and an Aidi backup secret key from your Aidi customer representative
+- Obtain an Aidi backup bucket name, an Aidi backup access key and an Aidi backup secret key from your Aidi customer representative.
+- Make sure you have `python3` installed.
 - Download the latest release from [release page](https://github.com/Aidi-Software/on-premises-backups/releases)
 - From the unzipped directory, run `python3 -m pip install -r requirements.txt`
 - From the unzipped directory, run the following command:
@@ -92,6 +93,7 @@ Par conséquent, les données renvoyées par ce script ne doivent pas être util
 
 ## Démarrage rapide
 - Obtenez un nom de bucket de sauvegarde Aidi, une clé d'accès de sauvegarde Aidi et une clé secrète de sauvegarde Aidi auprès de votre représentant client Aidi
+- Assurez-vous d'avoir `python3` installé
 - Téléchargez la dernière version depuis [page de publication](https://github.com/Aidi-Software/on-premises-backups/releases)
 - Depuis le répertoire décompressé, exécutez `python3 -m pip install -r requirements.txt`
 - Depuis le répertoire décompressé, exécutez la commande suivante :
