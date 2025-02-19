@@ -74,12 +74,12 @@ python3 aidi-on-premises-backup.py
 
 Downloading all files from the bucket named `backup-fs-my-environment-name` into `C:\backup-2025-25-08` (create the folder automatically), given the access key `ABCDEFGHIJ1234567890` and secret key `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`:
 ```
-python3 aidi-on-premise-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
+python3 aidi-on-premises-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
 ```
 
 Downloading only the new files (since last time the backup was executed) from the bucket named `backup-my-environment-name` into the existing folder `/home/admin/aidi-backup` , given the access key `ABCDEFGHIJ1234567890` and secret key `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`:
 ```
-python3 aidi-on-premise-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /home/admin/aidi-backup
+python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /home/admin/aidi-backup
 ```
 
 # Sauvegardes Aidi Sur-Site 
@@ -143,10 +143,10 @@ python3 aidi-on-premises-backup.py
 
 Téléchargement de tous les fichiers du bucket nommé `backup-fs-my-environment-name` dans `C:\backup-2025-25-08` (créer le dossier automatiquement), étant donné la clé d'accès `ABCDEFGHIJ1234567890` et la clé secrète `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`. :
 ```
-python3 aidi-on-premise-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
+python3 aidi-on-premises-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
 ```
 
 Téléchargement uniquement des nouveaux fichiers (depuis la dernière fois la sauvegarde a été exécutée) à partir du bucket nommé `backup-my-environment-name` dans le dossier existant `/home/admin/aidi-backup`, étant donné la clé d'accès `ABCDEFGHIJ1234567890` et la clé secrète `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`:
 ```
-python3 aidi-on-premise-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /home/admin/aidi-backup -o false
+python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /home/admin/aidi-backup -o false
 ```
