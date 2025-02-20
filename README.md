@@ -43,7 +43,7 @@ You must contact your Aidi Customer representative to obtain the following infor
 
 ## Installation
 
-1. Go to the [release page](https://github.com/Aidi-Software/on-premises-backups/releases) of this repository and download the lastest release
+1. Go to the [release page](https://github.com/Aidi-Software/on-premises-backups/releases) of this repository and download the zip file of the lastest release.
 2. Unzip the folder and open a terminal at the root of the unzipped folder
 3. Run the following command: `python3 -m pip install -r requirements.txt`
 
@@ -112,7 +112,7 @@ Vous devez contacter votre représentant client Aidi pour obtenir les informatio
 
 ## Installation
 
-1. Accédez à la [page de publication](https://github.com/Aidi-Software/on-premises-backups/releases) de ce répertoire et téléchargez la dernière version
+1. Accédez à la [page de publication](https://github.com/Aidi-Software/on-premises-backups/releases) de ce répertoire et téléchargez le fichier zip de la dernière version.
 2. Décompressez le dossier et ouvrez un terminal à la racine du dossier décompressé
 3. Exécutez la commande suivante : `python3 -m pip install -r requirements.txt`
 
