@@ -28,8 +28,14 @@ As a result, the data returned by this script should not be used for business lo
 - Download the latest release from [release page](https://github.com/Aidi-Software/on-premises-backups/releases)
 - From the unzipped directory, run `python3 -m pip install -r requirements.txt`
 - From the unzipped directory, run the following command:
+
+Linux / MacOS:
 ```
 python3 aidi-on-premises-backup.py -b <backup_bucket_name> -a <backup_access_key> -s <backup_secret_key> -t /path/to/backup -f true -o false
+```
+Windows:
+```
+python3 aidi-on-premises-backup.py -b <backup_bucket_name> -a <backup_access_key> -s <backup_secret_key> -t C:\path\to\backup -f true -o false
 ```
 
 ## Prerequisites
@@ -72,14 +78,17 @@ python3 aidi-on-premises-backup.py
 
 ## Examples
 
-Downloading all files from the bucket named `backup-fs-my-environment-name` into `C:\backup-2025-25-08` (create the folder automatically), given the access key `ABCDEFGHIJ1234567890` and secret key `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`:
+The following command downloads all files from the bucket named `backup-fs-my-environment-name` into the `backup-2025-25-08` folder (create the folder automatically), given the access key `ABCDEFGHIJ1234567890` and secret key `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`:
+
+Linux / MacOS:
+```
+python3 aidi-on-premises-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /backup-2025-25-08 -f true
+python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /backup-2025-25-08 -f true
+```
+Windows:
 ```
 python3 aidi-on-premises-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
-```
-
-Downloading only the new files (since last time the backup was executed) from the bucket named `backup-my-environment-name` into the existing folder `/home/admin/aidi-backup` , given the access key `ABCDEFGHIJ1234567890` and secret key `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`:
-```
-python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /home/admin/aidi-backup
+python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
 ```
 
 # Sauvegardes Aidi Sur-Site 
@@ -97,8 +106,15 @@ Par conséquent, les données renvoyées par ce script ne doivent pas être util
 - Téléchargez la dernière version depuis [page de publication](https://github.com/Aidi-Software/on-premises-backups/releases)
 - Depuis le répertoire décompressé, exécutez `python3 -m pip install -r requirements.txt`
 - Depuis le répertoire décompressé, exécutez la commande suivante :
+
+Linux / MacOS:
 ```
 python3 aidi-on-premises-backup.py -b <nom_bucket_sauvegarde> -a <cle_acces_sauvegarde> -s <cle_secrete_sauvegarde> -t /emplacement/de/la/sauvegarde -f true -o false
+```
+
+Windows:
+```
+python3 aidi-on-premises-backup.py -b <nom_bucket_sauvegarde> -a <cle_acces_sauvegarde> -s <cle_secrete_sauvegarde> -t C:\emplacement\de\la\sauvegarde -f true -o false
 ```
 
 ## Prérequis
@@ -141,12 +157,15 @@ python3 aidi-on-premises-backup.py
 
 ## Exemples
 
-Téléchargement de tous les fichiers du bucket nommé `backup-fs-my-environment-name` dans `C:\backup-2025-25-08` (créer le dossier automatiquement), étant donné la clé d'accès `ABCDEFGHIJ1234567890` et la clé secrète `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`. :
+Téléchargement de tous les fichiers du bucket nommé `backup-fs-my-environment-name` dans le dossier `backup-2025-25-08` (créer le dossier automatiquement), étant donné la clé d'accès `ABCDEFGHIJ1234567890` et la clé secrète `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`. :
+
+Linux / MacOS:
+```
+python3 aidi-on-premises-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /backup-2025-25-08 -f true
+python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /backup-2025-25-08 -f true
+```
+Windows:
 ```
 python3 aidi-on-premises-backup.py -b backup-fs-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
-```
-
-Téléchargement uniquement des nouveaux fichiers (depuis la dernière fois la sauvegarde a été exécutée) à partir du bucket nommé `backup-my-environment-name` dans le dossier existant `/home/admin/aidi-backup`, étant donné la clé d'accès `ABCDEFGHIJ1234567890` et la clé secrète `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`:
-```
-python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t /home/admin/aidi-backup -o false
+python3 aidi-on-premises-backup.py -b backup-my-environment-name -a ABCDEFGHIJ1234567890 -s aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123 -t C:\backup-2025-25-08 -f true
 ```
