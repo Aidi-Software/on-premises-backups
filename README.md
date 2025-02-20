@@ -67,7 +67,7 @@ python3 aidi-on-premises-backup.py
 -  `-a|--aidi-backup-access-key <aidi_backup_access_key>` (Required): Access key as given by your Aidi customer service representative. Example: `ABCDEFGHIJ1234567890`
 -  `-s|--aidi-backup-secret-key <aidi_backup_secret_key>`: Secret key as given by your Aidi customer service representative. Can also be provided using the the `AIDI_BACKUP_SECRET_KEY` environment variable for improved security, if not provided as a command-line argument. Example: `aBcDeFgHiJkLmNoPqRsTuVwXyZ+1234567890123`
 - `-t|--target-directory <target_directory>` (Required): The target directory where the backup should be located. Example: `/tmp/backup-2025-02-08`
-- `-f|--force-create-directory <force_create_directory>`: Whether the directory (and all its parents) should automatically be created or not if they do not exist. May exVit if this script is not given permission to create the directory. Defaults to `false`.
+- `-f|--force-create-directory <force_create_directory>`: Whether the directory (and all its parents) should automatically be created or not if they do not exist. May exit if this script is not given permission to create the directory. Defaults to `false`.
 - `-o|--overwrite-existing-files <overwrite_existing_files>`: Overwrites the downloaded files if they do not already exist. Defaults to `false`.
 
 ## Examples
