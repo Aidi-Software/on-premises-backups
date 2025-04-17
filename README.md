@@ -19,11 +19,10 @@ Aidi On-Premise Backup script
 
 Generates a backup of an Aidi instance locally. Is essentially a wrapper for a boto3 connection to an AWS S3 bucket. 
 
-This script is meant to backup an Aidi instance locally. It is not meant to extract or manipulate Aidi's data. The structure and content of the data returned by this script may change over time without notice. 
-As a result, the data returned by this script should not be used for business logic, reporting, or any other application beyond backups. Aidi is not responsible for any issues arising from the use of this script outside its intended purpose.
+Aidi reserves the right to modify the format, content, or structure of the data and tables without prior notice as its product evolves. Therefore, if the client develops their own queries to periodically extract data from this database, they will need to adjust their queries to ensure their continued operation in the event of a change to the table/data structure.
 
 ## Quickstart
-- Obtain an Aidi backup bucket name, an Aidi backup access key and an Aidi backup secret key from your Aidi customer representative.
+- Obtain an Aidi backup bucket name, an Aidi backup access key and an Aidi backup secret key from support@aidi.io
 - Make sure you have `python3` installed.
 - Download the latest release from [release page](https://github.com/Aidi-Software/on-premises-backups/releases)
 - From the unzipped directory, run `python3 -m pip install -r requirements.txt`
@@ -42,7 +41,7 @@ python3 aidi-on-premises-backup.py -b <backup_bucket_name> -a <backup_access_key
 
 A valid `python3` installation must be available on the operating system. Verify that a valid Python installation is present by typing  `python3 --version` in a terminal.
 
-You must contact your Aidi Customer representative to obtain the following informations:
+You must contact support@aidi.io to obtain the following informations:
 - The backup bucket names. You may be given two bucket names: One for the database backups, and one for the filesystem. If that is the case, the command must be executed twice.
 - The backup access key
 - The backup secret key.
@@ -97,11 +96,10 @@ Script de sauvegarde sur site Aidi
 
 Génère une sauvegarde d'une instance Aidi localement. Est essentiellement une surcouche pour une connexion boto3 à un bucket AWS S3. 
 
-Ce script est destiné à sauvegarder votre instance Aidi localement. Il n'est pas destiné à extraire ou manipuler les données d'Aidi. La structure et le contenu des données renvoyées par ce script peuvent changer sans préavis. 
-Par conséquent, les données renvoyées par ce script ne doivent pas être utilisées à des fins de logique applicative, de création de rapports ou pour toute autre application autre que les sauvegardes. Aidi n'est pas responsable des problèmes résultant de l'utilisation de ce script en dehors de son objectif prévu.
+Aidi se réserve le droit de modifier sans préavis le format, le contenu ou la structure des données et des tables selon l’évolution de son produit. Par conséquent, si le client développe ses propres requêtes pour extraire des données périodiquement à partir de cette base de données, il sera nécessaire qu’il doive ajuster ses requêtes pour assurer leur fonctionnement advenant un changement à la structure des tables/données.
 
 ## Démarrage rapide
-- Obtenez un nom de bucket de sauvegarde Aidi, une clé d'accès de sauvegarde Aidi et une clé secrète de sauvegarde Aidi auprès de votre représentant client Aidi
+- Obtenez un nom de bucket de sauvegarde Aidi, une clé d'accès de sauvegarde Aidi et une clé secrète de sauvegarde Aidi auprès de support@aidi.io
 - Assurez-vous d'avoir `python3` installé
 - Téléchargez la dernière version depuis [page de publication](https://github.com/Aidi-Software/on-premises-backups/releases)
 - Depuis le répertoire décompressé, exécutez `python3 -m pip install -r requirements.txt`
@@ -121,7 +119,7 @@ python3 aidi-on-premises-backup.py -b <nom_bucket_sauvegarde> -a <cle_acces_sauv
 
 Une installation `python3` valide doit être disponible sur le système d'exploitation. Vérifiez qu'une installation Python valide est présente en saisissant `python3 --version` dans un terminal.
 
-Vous devez contacter votre représentant client Aidi pour obtenir les informations suivantes :
+Vous devez contacter support@aidi.io pour obtenir les informations suivantes :
 - Les noms des buckets de sauvegarde. Deux noms de buckets peuvent vous être attribués : un pour les sauvegardes de base de données et un pour le système de fichiers. Si tel est le cas, la commande doit être exécutée deux fois.
 - La clé d'accès de sauvegarde
 - La clé secrète de sauvegarde.
