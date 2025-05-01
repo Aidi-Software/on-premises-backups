@@ -1,6 +1,7 @@
 - [Aidi On-Premises Backup](#aidi-on-premises-backup)
   - [Quickstart](#quickstart)
   - [Prerequisites](#prerequisites)
+  - [Integration with Client](#integration-with-client)
   - [Installation](#installation)
   - [Execution](#execution)
   - [Usage](#usage)
@@ -8,6 +9,7 @@
 - [Sauvegardes Aidi Sur-Site](#sauvegardes-aidi-sur-site)
   - [Démarrage rapide](#démarrage-rapide)
   - [Prérequis](#prérequis)
+  - [Intégration avec le client](#integration-avec-le-client)
   - [Installation](#installation-1)
   - [Exécution](#exécution)
   - [Utilisation](#utilisation)
@@ -45,6 +47,16 @@ You must contact support@aidi.io to obtain the following informations:
 - The backup bucket names. You may be given two bucket names: One for the database backups, and one for the filesystem. If that is the case, the command must be executed twice.
 - The backup access key
 - The backup secret key.
+
+## Integration with Client
+There are many ways this solution can be integrated within a client's on-premises architecture. At its core, Aidi offers backups in AWS S3 Buckets and the client is free to obtain the content of these AWS S3 Buckets using their own tools and methodology. This script simplifies obtaining the backups from the S3 Buckets for clients that do not leverage the AWS Cloud.
+
+There are three proposed integrations methods.
+- Option 1: This option leverages this script to backup the content of both buckets into a file system. The client will have to configure a virtual machine, Docker container or other way to run this Python 3 script periodically.
+- Option 2: This option are for client that already have an AWS Cloud. This uses an AWS Lambda function to copy the content of both Aidi AWS S3 Bucket into the customer's AWS S3 Bucket. It also uses AWS EventBridge to periodically trigger the AWS Lambda function.
+- Option 3 (Not Recommended): This option is for a client that wants to have the content of the Aidi database into their own MariaDB database. This option leverages the current script to backup the content of the files bucket into the client's filesystem. Furthermore, the current script is also used to seperately download the .sql database dump from the Database bucket, and uses a client such as `mysqlclient` to import this .sql database dump into a database. The client will have to configure a virtual machine, Docker container or another other way to run this Python 3 script and `mysqlclient` command periodically.
+
+
 
 ## Installation
 
@@ -123,6 +135,15 @@ Vous devez contacter support@aidi.io pour obtenir les informations suivantes :
 - Les noms des buckets de sauvegarde. Deux noms de buckets peuvent vous être attribués : un pour les sauvegardes de base de données et un pour le système de fichiers. Si tel est le cas, la commande doit être exécutée deux fois.
 - La clé d'accès de sauvegarde
 - La clé secrète de sauvegarde.
+
+# Intégration avec le client
+
+Cette solution peut être intégrée de nombreuses manières à l'architecture sur site d'un client. Aidi propose des sauvegardes dans des buckets AWS S3, et le client est libre d'en récupérer le contenu grâce à ses propres outils et méthodes. Ce script simplifie l'obtention des sauvegardes depuis les buckets AWS S3 pour les clients qui n'utilisent pas le cloud AWS.
+
+Trois méthodes d'intégration sont proposées.
+- Option 1 : Cette option utilise ce script pour sauvegarder le contenu des deux buckets AWS S3 dans un système de fichiers. Le client devra configurer une machine virtuelle, un conteneur Docker ou un autre moyen d'exécuter périodiquement ce script Python 3.
+- Option 2 : Cette option est destinée aux clients disposant déjà d'un cloud AWS. Elle utilise une fonction AWS Lambda pour copier le contenu des deux buckets AWS S3 d'Aidi dans le bucket AWS S3 du client. Elle utilise également AWS EventBridge pour déclencher périodiquement la fonction AWS Lambda.
+- Option 3 (non recommandée) : Cette option est destinée aux clients souhaitant intégrer le contenu de la base de données Aidi dans leur propre base de données MariaDB. Elle exploite le script actuel pour sauvegarder le contenu du bucket de fichiers dans le système de fichiers du client. De plus, le script actuel permet également de télécharger séparément le fichier .sql du bucket AWS S3 de base de données et utilise un client tel que `mysqlclient` pour importer ce fichier .sql dans une base de données MariaDB ou MySQL. Le client devra configurer une machine virtuelle, un conteneur Docker ou autre pour permettre l'exécution périodique de ce script Python 3 et de la commande `mysqlclient`
 
 ## Installation
 
